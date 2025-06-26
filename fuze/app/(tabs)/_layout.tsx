@@ -21,66 +21,66 @@ export default function TabLayout() {
   return (
     <Tabs
       screenOptions={{
-        tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        // Disable the static render of the header on web
-        // to prevent a hydration error in React Navigation v6.
-        headerShown: useClientOnlyValue(false, true),
+      tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+      // Disable the static render of the header on web
+      // to prevent a hydration error in React Navigation v6.
+      headerShown: useClientOnlyValue(false, true),
       }}>
       <Tabs.Screen
-        name="index"
-        options={{
-          title: 'Tab One',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-          headerRight: () => (
-            <Link href="/modal" asChild>
-              <Pressable>
-                {({ pressed }) => (
-                  <FontAwesome
-                    name="info-circle"
-                    size={25}
-                    color={Colors[colorScheme ?? 'light'].text}
-                    style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                  />
-                )}
-              </Pressable>
-            </Link>
-          ),
-        }}
+      name="index"
+      options={{
+        title: 'Home',
+        tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
+        headerRight: () => (
+        <Link href="/modal" asChild>
+          <Pressable>
+          {({ pressed }) => (
+            <FontAwesome
+            name="info-circle"
+            size={25}
+            color={Colors[colorScheme ?? 'light'].text}
+            style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+            />
+          )}
+          </Pressable>
+        </Link>
+        ),
+      }}
       />
-        <Tabs.Screen
-        name="Shop"
-        options={{
-          title: 'Message',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
+      <Tabs.Screen
+      name="Shop"
+      options={{
+        title: 'Shop',
+        tabBarIcon: ({ color }) => <TabBarIcon name="shopping-cart" color={color} />,
+      }}
       />
-        <Tabs.Screen
-        name="Featured"
-        options={{
-          title: 'Featured',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
+      <Tabs.Screen
+      name="Featured"
+      options={{
+        title: 'Featured',
+        tabBarIcon: ({ color }) => <TabBarIcon name="fire" color={color} />,
+      }}
       />
-       <Tabs.Screen
-        name="Message"
-        options={{
-          title: 'Message',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
+      <Tabs.Screen
+      name="Message"
+      options={{
+        title: 'Message',
+        tabBarIcon: ({ color }) => <TabBarIcon name="envelope" color={color} />,
+      }}
       />
-        <Tabs.Screen
-        name="Profile"
-        options={{
-          title: 'Profile',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
+      <Tabs.Screen
+      name="Profile"
+      options={{
+        title: 'Profile',
+        tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
+      }}
       />
-       <Tabs.Screen
-        name="Test"
-        options={{
-          title: 'Test',
-          tabBarIcon: ({ color }) => <TabBarIcon name="code" color={color} />,
-        }}
+      <Tabs.Screen
+      name="Test"
+      options={{
+        title: 'Test',
+        tabBarIcon: ({ color }) => <TabBarIcon name="flask" color={color} />,
+      }}
       />
     </Tabs>
   );

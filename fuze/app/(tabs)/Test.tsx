@@ -2,7 +2,7 @@ import { StyleSheet, TextInput, Button, Alert, FlatList } from 'react-native';
 import { Text, View } from '@/components/Themed';
 import React, { useState } from 'react';
 import { useQuery, useRealm } from '@realm/react';
-import { Users } from "../../models/Users";
+import { Users } from "../auth/models/Users";
 
 export default function Test() {
   const realm = useRealm();

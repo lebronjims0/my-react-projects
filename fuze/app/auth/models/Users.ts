@@ -5,8 +5,7 @@ export class Users extends Realm.Object<Users> {
   name!: string;
   email!: string;
   password!: string;
-
+  createdAt: Date = new Date();
   static primaryKey= '_id';
 }
-
 

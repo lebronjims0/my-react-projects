@@ -2,7 +2,7 @@ import { StyleSheet, TextInput, Button, Alert } from 'react-native';
 import { Text, View } from '@/components/Themed';
 import React, { useState } from 'react';
 import { useRealm } from '@realm/react';
-import { Users } from '../../models/Users'; // Adjust path if needed
+import { Users } from './models/Users'; // Adjust path if needed
 import Realm from 'realm';
 
 export default function RegisterTheme() {

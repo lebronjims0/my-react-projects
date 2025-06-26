@@ -2,7 +2,7 @@ import { StyleSheet, Button } from 'react-native';
 import { Text, View, TouchableOpacity } from '@/components/Themed';
 import React from 'react';
 import { useNavigation, NavigationProp } from '@react-navigation/native';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 type RootStackParamList = {
   'auth/Register': undefined;
