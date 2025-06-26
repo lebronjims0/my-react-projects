@@ -51,9 +51,29 @@ function RootLayoutNav() {
   return (
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Realm>
-        <Stack>
-          <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
-          <Stack.Screen name="modal" options={{ presentation: 'modal' }} />
+       <Stack>
+          <Stack.Screen
+            name="(tabs)"
+            options={{ headerShown: false }}
+          />
+          <Stack.Screen
+            name="modal"
+            options={{ presentation: 'modal' }}
+          />
+          <Stack.Screen
+            name="auth/Register"
+            options={{
+              headerTitle: 'Create Account',
+              headerShown: true,
+            }}
+          />
+          <Stack.Screen
+            name="auth/RegisterTheme"
+            options={{
+              headerTitle: '',
+              headerShown: true,
+            }}
+          />
         </Stack>
       </Realm>
     </ThemeProvider>

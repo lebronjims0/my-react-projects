@@ -1,16 +1,34 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, Button } from 'react-native';
+import { Text, View, TouchableOpacity } from '@/components/Themed';
 import React from 'react';
-import { Text, View } from '@/components/Themed';
+import { useNavigation, NavigationProp } from '@react-navigation/native';
 
 
-export default function Profile (){
-    return (
-       <View>
-            <Text>
-               Profile
-            </Text>
-       </View>
-    );
+type RootStackParamList = {
+  'auth/Register': undefined;
+  // add other routes here if needed
+};
+
+export default function ProfileTheme() {
+  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+  return (
+    <View style={styles.container}>
+      <Text>Don't have account yet?</Text>
+      <Button title="Sign Up" onPress={() => navigation.navigate('auth/Register')} />
+    </View>
+  );
 }
+  
 
-const styles = StyleSheet.create({});
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+    title: {
+        fontSize: 20,
+        fontWeight: 'bold',
+    },
+});
+

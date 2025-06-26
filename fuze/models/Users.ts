@@ -8,3 +8,5 @@ export class Users extends Realm.Object<Users> {
 
   static primaryKey= '_id';
 }
+
+
