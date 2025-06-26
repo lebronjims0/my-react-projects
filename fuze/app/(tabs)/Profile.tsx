@@ -1,20 +1,19 @@
 import { StyleSheet, Button } from 'react-native';
+import { Link } from 'expo-router';
 import { Text, View, TouchableOpacity } from '@/components/Themed';
 import React from 'react';
-import { useNavigation, NavigationProp } from '@react-navigation/native';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import ProfileThemes from '@/components/ProfileTheme';
 
-type RootStackParamList = {
-  'auth/Register': undefined;
-  // add other routes here if needed
-};
+
 
 export default function ProfileTheme() {
-  const navigation = useNavigation<NavigationProp<RootStackParamList>>();
   return (
     <View style={styles.container}>
       <Text>Don't have account yet?</Text>
-      <Button title="Sign Up" onPress={() => navigation.navigate('auth/Register')} />
+      <Link href="/auth/Register" asChild>
+        <Button title="Sign Up" />
+      </Link>
+      <ProfileThemes />
     </View>
   );
 }
@@ -31,4 +30,3 @@ const styles = StyleSheet.create({
         fontWeight: 'bold',
     },
 });
-

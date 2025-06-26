@@ -1,3 +1,4 @@
+import 'react-native-get-random-values';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { DarkTheme, DefaultTheme, ThemeProvider } from '@react-navigation/native';
 import { useFonts } from 'expo-font';
@@ -60,19 +61,9 @@ function RootLayoutNav() {
             name="modal"
             options={{ presentation: 'modal' }}
           />
-          <Stack.Screen
-            name="auth/Register"
-            options={{
-              headerTitle: 'Create Account',
-              headerShown: true,
-            }}
-          />
-          <Stack.Screen
-            name="auth/RegisterTheme"
-            options={{
-              headerTitle: '',
-              headerShown: true,
-            }}
+           <Stack.Screen
+            name="auth"
+            options={{ headerShown: false }}
           />
         </Stack>
       </Realm>

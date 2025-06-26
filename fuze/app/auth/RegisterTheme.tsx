@@ -1,4 +1,4 @@
-import { StyleSheet, TextInput, Button, Alert } from 'react-native';
+import { StyleSheet, Button, Alert,TextInput } from 'react-native';
 import { Text, View } from '@/components/Themed';
 import React, { useState } from 'react';
 import { useRealm } from '@realm/react';
@@ -24,7 +24,7 @@ export default function RegisterTheme() {
       }
       realm.write(() => {
         realm.create('Users', {
-          _id: new Realm.BSON.ObjectId(),
+          userId: new Realm.BSON.ObjectId(),
           name,
           email,
           password,

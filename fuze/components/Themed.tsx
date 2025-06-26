@@ -50,3 +50,10 @@ export function TouchableOpacity(props: ViewProps) {
 
   return <DefaultView style={[{ backgroundColor }, style]} {...otherProps} />;
 }
+
+export function TextInput(props: TextProps) {
+  const { style, lightColor, darkColor, ...otherProps } = props;
+  const color = useThemeColor({ light: lightColor, dark: darkColor }, 'background');
+
+  return <DefaultText style={[{ color }, style]} {...otherProps} />;
+}
