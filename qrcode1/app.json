@@ -1,11 +1,11 @@
 {
   "expo": {
-    "name": "qrcode",
-    "slug": "qrcode",
+    "name": "qrcode1",
+    "slug": "qrcode1",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
-    "scheme": "qrcode",
+    "scheme": "qrcode1",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
     "splash": {
@@ -22,10 +22,7 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "package": "com.kdsmoke.qrcode",
-      "permissions": [
-        "android.permission.CAMERA"
-      ]
+      "package": "com.kdsmoke.qrcode1"
     },
     "web": {
       "bundler": "metro",
@@ -33,8 +30,7 @@
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
-      "expo-router",
-      "expo-barcode-scanner"
+      "expo-router"
     ],
     "experiments": {
       "typedRoutes": true
@@ -42,7 +38,7 @@
     "extra": {
       "router": {},
       "eas": {
-        "projectId": "a425e626-5336-4046-944e-96824fa66ec0"
+        "projectId": "d8ebf157-3a6b-40ea-9c9e-fa9fcd5b0968"
       }
     }
   }
