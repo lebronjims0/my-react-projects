@@ -1,19 +1,16 @@
 import { StyleSheet } from 'react-native';
 import { Text, View } from '@/components/Themed';
-import FunctionCamera from '../auth/FunctionCamera';
-import FriendList from '@/components/FriendList';
-export default function Function() {
+import Qrs from '../auth/AddQr';
+
+export default function Qr() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Function</Text>
-      <FunctionCamera />
-      <FriendList />
+      <Qrs />
     </View>
   );
 }
 
- 
-
+   
 const styles = StyleSheet.create({
   container: {
     flex: 1,

@@ -1,4 +1,4 @@
-package com.kdsmoke.qrcode
+package com.kennysport.qrcode
 import expo.modules.splashscreen.SplashScreenManager
 
 import android.os.Build

@@ -63,9 +63,8 @@ export default function AddQr() {
     );
   }
 
-  // Prepare QR data as a string with only the required fields, including userId
+  // Prepare QR data as a string with only the required fields
   const qrData = JSON.stringify({
-    userId: auth.currentUser?.uid || '',
     firstName: info.firstName || '',
     lastName: info.lastName || '',
     email: info.email || '',
@@ -77,7 +76,6 @@ export default function AddQr() {
       <Text style={styles.title}>Your Information QR</Text>
       <QRCode value={qrData} size={220} />
       <Text style={styles.infoText}>{qrData}</Text>
-      <Text style={{marginTop: 10, fontWeight: 'bold'}}>User ID: {auth.currentUser?.uid}</Text>
     </View>
   );
 }

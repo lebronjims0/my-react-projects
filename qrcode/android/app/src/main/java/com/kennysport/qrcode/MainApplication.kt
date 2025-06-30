@@ -1,4 +1,4 @@
-package com.kdsmoke.qrcode
+package com.kennysport.qrcode
 
 import android.app.Application
 import android.content.res.Configuration
